@@ -53,7 +53,7 @@ export default function UserRoutes(app) {
 	};
 
 	const profile = (req, res) => {
-		const currentUser =  req.body
+		const currentUser =  req.session['currentUser']
 		console.log(currentUser)
             if (!currentUser) {
                 console.log("its this 401")
